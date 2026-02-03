@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Madhu Sudhan Reddy Konda Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header Section -->
+    <header class="container">
+      <div class="brand">
+        <img
+          class="brand-mark"
+          src="images/mk-logo.svg"
+          alt="MK monogram logo"
+          width="46"
+          height="46"
+        >
+        <p class="site-title"><strong>Madhu Sudhan Reddy Konda</strong> — About</p>
+      </div>
+      <p class="tagline">
+        A little more detail about my background, my cricket hobby, and the skills I’m building.
+      </p>
+
+      <!-- Navigation Section -->
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cricket.html">Cricket</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="container">
+      <div class="grid">
+        <div>
+          <!-- Jump Links Section -->
+          <section class="card" aria-labelledby="jump-title">
+            <h1 id="jump-title">About Me</h1>
+            <p class="small">
+              Jump to section:
+              <a href="#about-story">Story</a> |
+              <a href="#skills">Skills</a> |
+              <a href="#goals">Top 5 goals</a> |
+              <a href="#skills-table">Skills table</a> |
+              <a href="#quote">Quote</a>
+            </p>
+          </section>
+
+          <hr>
+
+          <!-- About Story Section -->
+          <section id="about-story" class="card" aria-labelledby="story-title">
+            <h2 id="story-title">My story</h2>
+            <p>
+              Hello there! I’m Madhu, a master’s student in Computer Science at Georgia State University. I love solving
+              algorithmic challenges, building systems that make life a little easier, and hacking on side projects.
+              I like projects that turn messy problems into clear workflows.
+            </p>
+            <p>
+              I’ve worked across both frontend and backend web technologies, mostly in <strong>React</strong>,
+              <strong>Python</strong>, <strong>Java</strong>, and <strong>TypeScript</strong>. I also enjoy the terminal
+              and have built command-line tools—there’s something satisfying about fast, keyboard-first workflows.
+            </p>
+            <p>
+              Outside tech, my favorite hobby is <em>playing cricket and watching cricket</em>. Cricket taught me to
+              think a few moves ahead, stay calm under pressure, and keep improving even when progress feels slow.
+            </p>
+            <p>
+              This page is built to practice semantic HTML and content structure. It’s not meant to be my main personal
+              website; it’s a hands-on exercise to strengthen fundamentals.
+            </p>
+          </section>
+
+          <hr>
+
+          <!-- Skills / Interests Section -->
+          <section id="skills" class="card" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills & interests (unordered list)</h2>
+            <p>
+              A quick mix of what I use regularly and what I’m actively improving. Some are technical, some are hobby
+              related.
+            </p>
+            <ul>
+              <li><strong>Web development</strong>: React, REST APIs, and clean UI structure</li>
+              <li><strong>Backend</strong>: Python and Java services with practical debugging habits</li>
+              <li><strong>TypeScript</strong>: safer frontend code and better tooling</li>
+              <li><strong>Cricket</strong>: practice sessions, match analysis, and team mindset</li>
+              <li><strong>Learning style</strong>: small daily improvements over big “one-time” bursts</li>
+            </ul>
+          </section>
+
+          <hr>
+
+          <!-- Goals Section -->
+          <section id="goals" class="card" aria-labelledby="goals-title">
+            <h2 id="goals-title">Top 5 goals for 2026 (ordered list)</h2>
+            <p>These goals keep me focused and give my learning a timeline.</p>
+            <ol>
+              <li><strong>Ship more</strong>: publish small projects more consistently</li>
+              <li><strong>Improve fundamentals</strong>: write cleaner HTML/CSS/JS from scratch</li>
+              <li><strong>Deepen systems thinking</strong>: performance, reliability, and observability</li>
+              <li><strong>Cricket fitness</strong>: stay consistent with practice and conditioning</li>
+              <li><strong>Community</strong>: collaborate more and learn from other builders</li>
+            </ol>
+          </section>
+
+          <hr>
+
+          <!-- Table Section -->
+          <section id="skills-table" class="card" aria-labelledby="table-title">
+            <h2 id="table-title">Skills table</h2>
+            <p>
+              This table uses a caption, thead, and tbody as required. The data is real and matches what I work with.
+            </p>
+
+            <table>
+              <caption>
+                Skills overview (what I use, my level, and where it shows up)
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Skill</th>
+                  <th scope="col">Proficiency</th>
+                  <th scope="col">Where I use it</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Python</td>
+                  <td>Advanced</td>
+                  <td>APIs, scripting, and AI/ML pipelines</td>
+                </tr>
+                <tr>
+                  <td>React</td>
+                  <td>Intermediate</td>
+                  <td>Web UIs and dashboards</td>
+                </tr>
+                <tr>
+                  <td>TypeScript</td>
+                  <td>Intermediate</td>
+                  <td>Frontend codebases and safer refactors</td>
+                </tr>
+                <tr>
+                  <td>Java</td>
+                  <td>Intermediate</td>
+                  <td>Backend services and distributed systems</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <hr>
+
+          <!-- Extra Credit Table Section (merged cells) -->
+          <section class="card" aria-labelledby="routine-title">
+            <h2 id="routine-title">Extra credit: weekly routine table (merged cells)</h2>
+            <p>
+              This table uses <strong>colspan</strong> and <strong>rowspan</strong> in a way that makes sense: the
+              headers group weekdays vs weekend, and the “Evening” label spans two rows.
+            </p>
+
+            <table>
+              <caption>
+                Weekly snapshot (study, coding, and cricket)
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Time</th>
+                  <th scope="col" colspan="5">Weekdays</th>
+                  <th scope="col" colspan="2">Weekend</th>
+                </tr>
+                <tr>
+                  <th scope="col">Block</th>
+                  <th scope="col">Mon</th>
+                  <th scope="col">Tue</th>
+                  <th scope="col">Wed</th>
+                  <th scope="col">Thu</th>
+                  <th scope="col">Fri</th>
+                  <th scope="col">Sat</th>
+                  <th scope="col">Sun</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Morning</th>
+                  <td>Classes</td>
+                  <td>Classes</td>
+                  <td>Classes</td>
+                  <td>Classes</td>
+                  <td>Classes</td>
+                  <td>Errands</td>
+                  <td>Planning</td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">Evening</th>
+                  <td>Coding</td>
+                  <td>Gym</td>
+                  <td>Coding</td>
+                  <td>Cricket</td>
+                  <td>Review</td>
+                  <td>Cricket</td>
+                  <td>Relax</td>
+                </tr>
+                <tr>
+                  <td>Reading</td>
+                  <td>Projects</td>
+                  <td>LeetCode</td>
+                  <td>Projects</td>
+                  <td>Movies</td>
+                  <td>Friends</td>
+                  <td>Prep</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <hr>
+
+          <!-- Images Section -->
+          <section class="card" aria-labelledby="images-title">
+            <h2 id="images-title">A couple of visuals</h2>
+            <article aria-labelledby="img-0-title">
+              <h3 id="img-0-title">Profile photo</h3>
+              <figure>
+                <img
+                  src="images/madhu-headshot.jpg"
+                  alt="Headshot photo of Madhu wearing a maroon polo shirt against a light background"
+                  width="1024"
+                  height="1365"
+                >
+                <figcaption>Profile photo.</figcaption>
+              </figure>
+            </article>
+
+            <article aria-labelledby="img-1-title">
+              <h3 id="img-1-title">Coding workspace</h3>
+              <figure>
+                <img
+                  src="images/coding-workspace.svg"
+                  alt="Stylized monitor showing code lines with a keyboard below, representing a coding workspace"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>Keeping things simple: write, run, learn, repeat.</figcaption>
+              </figure>
+            </article>
+
+            <article aria-labelledby="img-2-title">
+              <h3 id="img-2-title">Terminal habits</h3>
+              <figure>
+                <img
+                  src="images/terminal-cli.svg"
+                  alt="Stylized terminal window with command prompts and localhost server output lines"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>Fast feedback loops are everything.</figcaption>
+              </figure>
+            </article>
+          </section>
+
+          <hr>
+
+          <!-- Quote Section -->
+          <section id="quote" class="card" aria-labelledby="quote-title">
+            <h2 id="quote-title">A quote I like</h2>
+            <blockquote>
+              <p>
+                “Small improvements, repeated daily, lead to remarkable results.”
+              </p>
+            </blockquote>
+            <p class="small">
+              That mindset helps with both learning software and improving in cricket.
+            </p>
+          </section>
+        </div>
+
+        <!-- Aside Section -->
+        <aside class="card" aria-labelledby="aside-title">
+          <h2 id="aside-title">Quick links & contact</h2>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/madkondaz/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/madkonda/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+            <li>
+              <a href="https://madkonda.github.io/" target="_blank" rel="noopener noreferrer">Reference portfolio</a>
+            </li>
+          </ul>
+
+          <hr>
+
+          <h2>Mini checklist</h2>
+          <p class="small">
+            Remember: validate with W3C, confirm headings are in order, and test every single link.
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <p class="small">
+        &copy; 2026 Madhu Sudhan Reddy Konda. Coursework 02 (HTML Fundamentals).
+      </p>
+      <nav class="footer-links small" aria-label="Footer links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="#main-content">Back to top</a>
+      </nav>
+    </footer>
+  </body>
+</html>
+

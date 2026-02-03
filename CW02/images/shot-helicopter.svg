@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Helicopter shot illustration</title>
+  <desc id="desc">A simple illustration showing a bat follow-through arc like a helicopter motion and a ball lifting high.</desc>
+  <rect width="1200" height="700" fill="#0b1020"/>
+  <rect x="90" y="90" width="1020" height="520" rx="28" fill="#121a33" stroke="rgba(255,255,255,0.14)"/>
+
+  <path d="M560 470 C520 360, 560 260, 680 220 C800 180, 890 250, 900 340" fill="none" stroke="#a7f3d0" stroke-width="10" opacity="0.85"/>
+  <path d="M585 470 C555 375, 600 290, 705 260 C820 225, 890 290, 885 360" fill="none" stroke="#7dd3fc" stroke-width="8" opacity="0.7"/>
+
+  <path d="M320 420 C460 380, 560 330, 650 210" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="3"/>
+  <circle cx="680" cy="190" r="18" fill="#b91c1c"/>
+
+  <g transform="translate(380,260) rotate(-18 220 180)">
+    <rect x="200" y="70" width="90" height="240" rx="24" fill="#f5deb3" stroke="#c4a484" stroke-width="6"/>
+    <rect x="232" y="310" width="26" height="150" rx="13" fill="#8b5a2b"/>
+  </g>
+
+  <text x="160" y="560" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="34" fill="#e8ecff">
+    Helicopter shot (innovative shot)
+  </text>
+  <text x="160" y="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="20" fill="#b8c0ff">
+    Powerful wristy follow-through to lift yorkers and full balls
+  </text>
+</svg>
+

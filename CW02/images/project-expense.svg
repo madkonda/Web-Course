@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Expense tracker illustration</title>
+  <desc id="desc">A stylized expense tracker screen with categories and a simple bar chart representing budgeting.</desc>
+  <rect width="1200" height="700" fill="#0b1020"/>
+  <rect x="90" y="90" width="1020" height="520" rx="28" fill="#121a33" stroke="rgba(255,255,255,0.14)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial">
+    <text x="140" y="160" font-size="36" fill="#e8ecff">Expense Tracker</text>
+    <text x="140" y="200" font-size="20" fill="#b8c0ff">Weekly overview (sample)</text>
+  </g>
+
+  <rect x="140" y="240" width="520" height="330" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+  <rect x="690" y="240" width="370" height="330" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="20" fill="#e8ecff">
+    <text x="170" y="290" fill="#b8c0ff">Categories</text>
+    <text x="170" y="335">Food</text>
+    <text x="170" y="380">Transport</text>
+    <text x="170" y="425">Shopping</text>
+    <text x="170" y="470">Subscriptions</text>
+    <text x="170" y="515">Savings</text>
+  </g>
+
+  <g fill="#7dd3fc" opacity="0.9">
+    <rect x="420" y="318" width="210" height="16" rx="8"/>
+    <rect x="420" y="363" width="140" height="16" rx="8"/>
+    <rect x="420" y="408" width="170" height="16" rx="8"/>
+    <rect x="420" y="453" width="120" height="16" rx="8"/>
+  </g>
+  <g fill="#a7f3d0" opacity="0.9">
+    <rect x="420" y="498" width="240" height="16" rx="8"/>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="20">
+    <text x="720" y="290" fill="#b8c0ff">Spending</text>
+  </g>
+  <g>
+    <rect x="740" y="500" width="40" height="60" rx="10" fill="#7dd3fc" opacity="0.9"/>
+    <rect x="800" y="460" width="40" height="100" rx="10" fill="#7dd3fc" opacity="0.7"/>
+    <rect x="860" y="420" width="40" height="140" rx="10" fill="#a7f3d0" opacity="0.85"/>
+    <rect x="920" y="480" width="40" height="80" rx="10" fill="#7dd3fc" opacity="0.6"/>
+  </g>
+</svg>
+

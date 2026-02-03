@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Analytics dashboard illustration</title>
+  <desc id="desc">A stylized analytics dashboard with charts and cards representing a data project.</desc>
+  <rect width="1200" height="700" fill="#0b1020"/>
+  <rect x="80" y="80" width="1040" height="540" rx="30" fill="#121a33" stroke="rgba(255,255,255,0.14)"/>
+
+  <rect x="130" y="130" width="420" height="150" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+  <rect x="580" y="130" width="490" height="150" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+  <rect x="130" y="310" width="940" height="260" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" fill="#e8ecff">
+    <text x="150" y="165" font-size="22" fill="#b8c0ff">Uploads</text>
+    <text x="150" y="210" font-size="44">128</text>
+    <text x="600" y="165" font-size="22" fill="#b8c0ff">Tracking accuracy</text>
+    <text x="600" y="210" font-size="44">94%</text>
+    <text x="150" y="350" font-size="22" fill="#b8c0ff">Trends</text>
+  </g>
+
+  <path d="M170 520 L260 470 L340 490 L420 410 L520 430 L610 360 L720 390 L820 310 L930 330 L1030 280"
+        fill="none" stroke="#7dd3fc" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 540 L260 520 L340 530 L420 490 L520 500 L610 470 L720 480 L820 440 L930 450 L1030 420"
+        fill="none" stroke="#a7f3d0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+
+  <circle cx="820" cy="310" r="10" fill="#7dd3fc"/>
+  <circle cx="1030" cy="280" r="10" fill="#7dd3fc"/>
+</svg>
+

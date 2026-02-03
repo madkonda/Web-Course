@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Cricket icon</title>
+  <desc id="desc">A small icon showing a cricket bat with a red ball, used as a section mark for the cricket page.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#a7f3d0" stop-opacity="0.14"/>
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="220" height="220" rx="44" fill="#0b1020" stroke="rgba(255,255,255,0.20)" />
+  <rect x="22" y="22" width="212" height="212" rx="42" fill="url(#bg)" />
+
+  <g transform="translate(68,44) rotate(18 60 80)">
+    <rect x="60" y="20" width="54" height="120" rx="14" fill="#f5deb3" stroke="#c4a484" stroke-width="4"/>
+    <rect x="79" y="140" width="16" height="60" rx="8" fill="#8b5a2b"/>
+  </g>
+
+  <circle cx="178" cy="156" r="26" fill="#b91c1c"/>
+  <path d="M162 142 C170 148, 178 164, 186 170" fill="none" stroke="#fee2e2" stroke-width="3" opacity="0.85"/>
+  <path d="M164 170 C172 164, 180 148, 188 142" fill="none" stroke="#fee2e2" stroke-width="3" opacity="0.65"/>
+</svg>
+

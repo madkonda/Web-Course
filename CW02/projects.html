@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Madhu Sudhan Reddy Konda Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header Section -->
+    <header class="container">
+      <div class="brand">
+        <img
+          class="brand-mark"
+          src="images/mk-logo.svg"
+          alt="MK monogram logo"
+          width="46"
+          height="46"
+        >
+        <p class="site-title"><strong>Madhu Sudhan Reddy Konda</strong> — Projects</p>
+      </div>
+      <p class="tagline">
+        A small gallery of portfolio items with semantic HTML, images, and descriptions.
+      </p>
+
+      <!-- Navigation Section -->
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="cricket.html">Cricket</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="container">
+      <div class="grid">
+        <div>
+          <!-- Intro Section -->
+          <section class="card" aria-labelledby="intro-title">
+            <h1 id="intro-title">My projects</h1>
+            <p>
+              I like building tools and dashboards that reduce friction. Some projects are complete, some are evolving,
+              and some are “next ideas” I want to explore. Each item below is wrapped in an <strong>article</strong>
+              with a heading, an image, and a short description.
+            </p>
+          </section>
+
+          <hr>
+
+          <!-- Gallery Image -->
+          <section class="card" aria-labelledby="gallery-title">
+            <h2 id="gallery-title">Gallery overview</h2>
+            <figure>
+              <img
+                src="images/projects-gallery.svg"
+                alt="Illustration of three project cards labeled Dashboard, CLI Tool, and App representing a portfolio gallery"
+                width="1200"
+                height="700"
+              >
+              <figcaption>A simple visual to introduce the project section.</figcaption>
+            </figure>
+          </section>
+
+          <hr>
+
+          <!-- Project Items -->
+          <section class="card" aria-labelledby="items-title">
+            <h2 id="items-title">Project highlights</h2>
+
+            <article class="card" aria-labelledby="p1-title">
+              <h3 id="p1-title">TailOR Dashboard</h3>
+              <figure>
+                <img
+                  src="images/project-dashboard.svg"
+                  alt="Analytics dashboard illustration with charts and cards representing a data project"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>Analytics dashboards and data workflows.</figcaption>
+              </figure>
+              <p>
+                An end-to-end analytics dashboard for behavioral video uploads and real-time tracking. It connects the
+                full flow: upload &rarr; processing &rarr; results, so it’s easy to review outcomes without hunting for
+                files.
+              </p>
+              <p>
+                On the engineering side, I focused on making the pipeline reproducible and observable. I like projects
+                like this because they combine product thinking with engineering details: data, UI, and reliability.
+              </p>
+              <p class="small">
+                Optional reference: <a href="https://madkonda.github.io/" target="_blank" rel="noopener noreferrer">see portfolio</a>
+              </p>
+            </article>
+
+            <article class="card" aria-labelledby="p2-title">
+              <h3 id="p2-title">ACEDIT (CLI tool)</h3>
+              <figure>
+                <img
+                  src="images/terminal-cli.svg"
+                  alt="Terminal window illustration representing a command-line tool used for fast developer workflows"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>Terminal-first tools for speed and focus.</figcaption>
+              </figure>
+              <p>
+                A command-line workflow tool where the goal is simple: reduce steps between “write code” and “verify
+                against test cases.” I like CLI tools because they reward careful UX decisions, even without a GUI.
+              </p>
+              <p>
+                The main idea is fast feedback: run quickly, compare expected output, and iterate. Tools like this help
+                me stay consistent when practicing problems on platforms like Codeforces, CodeChef, HackerRank, and SPOJ.
+              </p>
+              <p class="small">
+                Optional reference: <a href="https://github.com/madkonda/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+              </p>
+            </article>
+
+            <article class="card" aria-labelledby="p3-title">
+              <h3 id="p3-title">Cricket practice tracker (idea)</h3>
+              <figure>
+                <img
+                  src="images/cricket-bat-ball.svg"
+                  alt="Cricket bat and ball illustration representing cricket practice and training"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>A lightweight idea that mixes my hobby with software.</figcaption>
+              </figure>
+              <p>
+                A simple web app idea to track cricket practice: drills, duration, and progress notes. The main goal is
+                consistency—tiny improvements each week add up over a season.
+              </p>
+              <p>
+                I’d keep it beginner-friendly: pick one focus (batting, bowling, or fielding), log the session in under
+                30 seconds, and review a weekly summary. It’s a small product that’s perfect for practicing clean forms
+                and accessible layout.
+              </p>
+              <p class="small">
+                External inspiration:
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MDN HTML basics
+                </a>
+              </p>
+            </article>
+
+            <article class="card" aria-labelledby="p4-title">
+              <h3 id="p4-title">Expense Tracker (web app)</h3>
+              <figure>
+                <img
+                  src="images/project-expense.svg"
+                  alt="Expense tracker illustration with spending categories and a bar chart"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>A practical project: track spending and learn from the data.</figcaption>
+              </figure>
+              <p>
+                A simple expense tracker app idea focused on clarity: add transactions, categorize them, and review
+                weekly totals. Projects like this are great practice for building clean forms, tables, and user-friendly
+                flows.
+              </p>
+              <p>
+                Features I’d add next: monthly views, category budgets, CSV export, and a lightweight chart so trends are
+                obvious at a glance. It’s the kind of practical app that teaches good UX fundamentals without being
+                overwhelming.
+              </p>
+              <p class="small">
+                Link:
+                <a href="https://github.com/madkonda/" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+              </p>
+            </article>
+          </section>
+
+          <hr>
+
+          <!-- Connect Section -->
+          <section class="card" aria-labelledby="connect-title">
+            <h2 id="connect-title">Connect with me</h2>
+            <p>
+              Want to connect about software, algorithms, or cricket? The links below are here to meet the assignment
+              requirements and make it easy to reach me.
+            </p>
+            <ul>
+              <li>
+                <strong>Email</strong>:
+                <a href="mailto:msrkondaone@gmail.com">msrkondaone@gmail.com</a>
+              </li>
+              <li>
+                <strong>LinkedIn</strong>:
+                <a href="https://www.linkedin.com/in/madkondaz/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/madkondaz
+                </a>
+              </li>
+              <li>
+                <strong>GitHub</strong>:
+                <a href="https://github.com/madkonda/" target="_blank" rel="noopener noreferrer">github.com/madkonda</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Aside Section -->
+        <aside class="card" aria-labelledby="aside-title">
+          <h2 id="aside-title">Quick checks</h2>
+          <ul>
+            <li><strong>Navigation</strong>: Home / About / Projects works on all pages</li>
+            <li><strong>Images</strong>: stored in <em>images/</em> with descriptive alt text</li>
+            <li><strong>Links</strong>: external links open in a new tab and use rel="noopener noreferrer"</li>
+            <li><strong>Email link</strong>: mailto works</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <p class="small">
+        &copy; 2026 Madhu Sudhan Reddy Konda. Coursework 02 (HTML Fundamentals).
+      </p>
+      <nav class="footer-links small" aria-label="Footer links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#main-content">Back to top</a>
+      </nav>
+    </footer>
+  </body>
+</html>
+

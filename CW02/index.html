@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Madhu Sudhan Reddy Konda Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header Section -->
+    <header class="container">
+      <div class="brand">
+        <img
+          class="brand-mark"
+          src="images/mk-logo.svg"
+          alt="MK monogram logo"
+          width="46"
+          height="46"
+        >
+        <p class="site-title"><strong>Madhu Sudhan Reddy Konda</strong> — CW02 Portfolio</p>
+      </div>
+      <p class="tagline">
+        A simple HTML portfolio about <strong>coding</strong> and my hobby: <em>playing and watching cricket</em>.
+      </p>
+
+      <!-- Navigation Section -->
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cricket.html">Cricket</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="container">
+      <div class="grid">
+        <div>
+          <!-- Hero Section -->
+          <section class="card hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Welcome to My CW02 Portfolio</h1>
+            <p>
+              Hello there! I’m Madhu — I enjoy solving algorithmic challenges, building systems that make life a little
+              easier, and hacking on side projects. When I’m not coding, you’ll usually find me following cricket and
+              sneaking in a quick practice session.
+            </p>
+            <!-- Profile Photo -->
+            <figure>
+              <img
+                src="images/madhu-headshot.jpg"
+                alt="Headshot photo of Madhu wearing a maroon polo shirt against a light background"
+                width="1024"
+                height="1365"
+              >
+              <figcaption>Profile photo.</figcaption>
+            </figure>
+            <p class="small">
+              Location:<br>
+              Atlanta, GA, USA
+            </p>
+          </section>
+
+          <hr>
+
+          <!-- Welcome / Overview Section -->
+          <section class="card" aria-labelledby="overview-title">
+            <h2 id="overview-title">What you’ll find here</h2>
+            <p>
+              This site is intentionally simple and focused on <strong>HTML fundamentals</strong>: semantic structure,
+              accessibility, clean formatting, working links, and meaningful content.
+            </p>
+            <ul>
+              <li><strong>About page</strong>: my background, skills, goals, and a skills table</li>
+              <li><strong>Projects page</strong>: a small gallery of things I’ve built (and want to build)</li>
+              <li><strong>Cricket corner</strong>: why the sport keeps me disciplined and consistent</li>
+              <li><strong>Navigation</strong>: the same menu on all pages so you never get lost</li>
+              <li><strong>Accessibility basics</strong>: descriptive alt text and logical headings</li>
+            </ul>
+          </section>
+
+          <hr>
+
+          <!-- Featured Section -->
+          <section class="card" aria-labelledby="featured-title">
+            <h2 id="featured-title">Featured snapshots</h2>
+            <p>
+              A few quick visuals that represent my two main themes: building software and enjoying cricket. Each image
+              is stored locally in an <strong>images</strong> folder and includes descriptive alt text.
+            </p>
+
+            <article aria-labelledby="snap-1-title">
+              <h3 id="snap-1-title">Coding snapshot</h3>
+              <figure>
+                <img
+                  src="images/coding-workspace.svg"
+                  alt="Stylized monitor showing code lines with a keyboard below, representing a coding workspace"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>Coding: build, test, and iterate.</figcaption>
+              </figure>
+            </article>
+
+            <article aria-labelledby="snap-2-title">
+              <h3 id="snap-2-title">Practice mindset</h3>
+              <figure>
+                <img
+                  src="images/cricket-bat-ball.svg"
+                  alt="Illustration of a cricket bat angled across the canvas with a red cricket ball beside it"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>Cricket rewards consistency, just like learning to code.</figcaption>
+              </figure>
+            </article>
+
+            <article aria-labelledby="snap-3-title">
+              <h3 id="snap-3-title">Watching the game</h3>
+              <figure>
+                <img
+                  src="images/cricket-field.svg"
+                  alt="Illustration of an oval cricket field with a central pitch under a warm sunset glow"
+                  width="1200"
+                  height="700"
+                >
+                <figcaption>One of my favorite ways to relax: watching a close match.</figcaption>
+              </figure>
+            </article>
+          </section>
+
+          <hr>
+
+          <!-- Multimedia Section -->
+          <section class="card" aria-labelledby="media-title">
+            <h2 id="media-title">Multimedia: cricket video</h2>
+            <p>
+              On some school servers (like Codd), embedded YouTube iframes can be blocked by security policies. To make
+              sure this site always meets the multimedia requirement, I’m including a <strong>local audio clip</strong>
+              that works everywhere.
+            </p>
+            <p class="small">
+              Optional YouTube link (opens in new tab):
+              <a href="https://www.youtube.com/watch?v=98PpjrZjddw" target="_blank" rel="noopener noreferrer">
+                Watch cricket video on YouTube
+              </a>
+            </p>
+            <audio controls>
+              <source src="media/ipl.mp3" type="audio/mpeg">
+              <source src="media/cricket-intro.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </section>
+        </div>
+
+        <!-- Aside Section -->
+        <aside class="card" aria-labelledby="aside-title">
+          <h2 id="aside-title">Quick links</h2>
+          <p class="small">External links open in a new tab.</p>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/madkondaz/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/madkonda/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MDN: HTML basics
+              </a>
+            </li>
+          </ul>
+
+          <hr>
+
+          <h2>Fun facts</h2>
+          <p class="small">
+            In cricket, every ball is feedback. In coding, every test (or bug) is feedback. I like both because they
+            reward steady improvement.
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <p class="small">
+        &copy; 2026 Madhu Sudhan Reddy Konda. Built for Coursework 02 (HTML Fundamentals).
+      </p>
+      <nav class="footer-links small" aria-label="Footer links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="https://madkonda.github.io/" target="_blank" rel="noopener noreferrer">Reference portfolio</a>
+      </nav>
+    </footer>
+  </body>
+</html>
+

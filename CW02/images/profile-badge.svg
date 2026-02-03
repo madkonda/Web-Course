@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Profile badge illustration with code brackets and a cricket ball</title>
+  <desc id="desc">A simple dark-themed badge showing the name MK, code brackets, and a stylized red cricket ball to represent coding and cricket.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#a7f3d0" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="#0b1020"/>
+  <rect x="70" y="70" width="1060" height="560" rx="36" fill="url(#g)" stroke="rgba(255,255,255,0.18)"/>
+
+  <text x="120" y="190" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="44" fill="#e8ecff">
+    Madhu Konda
+  </text>
+  <text x="120" y="238" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="24" fill="#b8c0ff">
+    Coding • Cricket • Curiosity
+  </text>
+
+  <text x="120" y="380" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace" font-size="120" fill="#7dd3fc">
+    &lt;/&gt;
+  </text>
+
+  <circle cx="950" cy="370" r="120" fill="#b91c1c" opacity="0.95"/>
+  <path d="M890 310 C930 330, 970 410, 1010 430" fill="none" stroke="#fee2e2" stroke-width="8" opacity="0.85"/>
+  <path d="M900 420 C940 400, 980 330, 1020 310" fill="none" stroke="#fee2e2" stroke-width="8" opacity="0.65"/>
+  <text x="950" y="560" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="22" fill="#b8c0ff">
+    Profile / Logo
+  </text>
+</svg>
+

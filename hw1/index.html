@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Madhu Sudhan Reddy Konda - personal homepage hub for coursework, interests, and contact links.">
+    <title>Madhu Sudhan Reddy Konda - HW01 Homepage Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    >
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <div class="nav-brand">
+          <img class="nav-logo" src="images/mk-logo.svg" alt="MK monogram logo" width="40" height="40">
+          <span class="nav-title">Madhu’s Hub</span>
+        </div>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#coursework">Coursework</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a class="nav-portal" href="#coursework">
+                <i class="fas fa-th-large" aria-hidden="true"></i>
+                Quick Hub
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" type="button">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <figure class="hero-image">
+            <img
+              class="profile-photo"
+              src="images/madhu-headshot.jpg"
+              alt="Headshot photo of Madhu wearing a maroon polo shirt against a light background"
+              width="1024"
+              height="1365"
+            >
+          </figure>
+          <h1 id="hero-title" class="hero-title">Welcome — I’m Madhu</h1>
+          <p class="hero-subtitle">
+            A simple, responsive homepage that organizes my coursework, interests, and links in one place.
+          </p>
+          <a class="btn btn-primary" href="#coursework">Jump to Coursework</a>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section id="about" class="section about-section" aria-labelledby="about-title">
+        <div class="container">
+          <h2 class="section-title" id="about-title">About Me</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            I’m a Computer Science master’s student at Georgia State University. I enjoy problem solving, building
+            full-stack systems, and learning by shipping small projects with clean fundamentals.
+          </p>
+
+          <div class="stats">
+            <article class="stat-item">
+              <h3>Fundamentals first</h3>
+              <p>Clear HTML structure, accessible layouts, and readable styling</p>
+            </article>
+            <article class="stat-item">
+              <h3>Builder mindset</h3>
+              <p>Turn ideas into small working demos and iterate quickly</p>
+            </article>
+            <article class="stat-item">
+              <h3>Consistency</h3>
+              <p>Small improvements every day (coding and cricket)</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inspirational Quote Section -->
+      <section class="quote-section" aria-labelledby="quote-title">
+        <div class="container">
+          <h2 class="sr-only" id="quote-title">Quote</h2>
+          <blockquote class="quote">
+            <p class="quote-text" id="quote-text">“Build small. Learn fast. Repeat.”</p>
+            <footer class="quote-author">&mdash; my personal motto</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Coursework Section -->
+      <section id="coursework" class="section content-section" aria-labelledby="coursework-title">
+        <div class="container">
+          <h2 class="section-title" id="coursework-title">Course Hub</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+
+          <div class="content-grid">
+            <section class="card coursework-card" aria-labelledby="cw-card-title">
+              <div class="card-badge"><i class="fas fa-book" aria-hidden="true"></i> Coursework</div>
+              <h3 class="card-title" id="cw-card-title">My Coursework</h3>
+              <p class="small">
+                A quick snapshot of what I’m learning right now (core CS foundations + hands-on web development), plus a
+                tracker for in-class activities, coursework, homework, and projects.
+              </p>
+
+              <div class="coursework-category">
+                <h4 class="category-title" id="course-focus-title">
+                  <i class="fas fa-compass" aria-hidden="true"></i>
+                  Focus areas (5 core courses)
+                </h4>
+                <div class="course-grid">
+                  <article class="course-tile">
+                    <h5 class="course-title">
+                      <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                      Data Structures &amp; Algorithms
+                    </h5>
+                    <ul class="course-topics">
+                      <li>Arrays, hash maps, trees, graphs</li>
+                      <li>Complexity + problem-solving patterns</li>
+                      <li>Interview-style practice &amp; clean implementations</li>
+                    </ul>
+                  </article>
+
+                  <article class="course-tile">
+                    <h5 class="course-title">
+                      <i class="fas fa-microchip" aria-hidden="true"></i>
+                      Operating Systems
+                    </h5>
+                    <ul class="course-topics">
+                      <li>Processes/threads + scheduling</li>
+                      <li>Memory management + paging</li>
+                      <li>Synchronization + deadlocks</li>
+                    </ul>
+                  </article>
+
+                  <article class="course-tile">
+                    <h5 class="course-title">
+                      <i class="fas fa-database" aria-hidden="true"></i>
+                      Database Systems
+                    </h5>
+                    <ul class="course-topics">
+                      <li>Relational design + normalization</li>
+                      <li>SQL queries + indexing basics</li>
+                      <li>Transactions + ACID concepts</li>
+                    </ul>
+                  </article>
+
+                  <article class="course-tile">
+                    <h5 class="course-title">
+                      <i class="fas fa-network-wired" aria-hidden="true"></i>
+                      Computer Networks
+                    </h5>
+                    <ul class="course-topics">
+                      <li>HTTP, DNS, TCP/IP fundamentals</li>
+                      <li>Latency, reliability, congestion basics</li>
+                      <li>Debugging with tools (curl, traceroute)</li>
+                    </ul>
+                  </article>
+
+                  <article class="course-tile">
+                    <h5 class="course-title">
+                      <i class="fas fa-code" aria-hidden="true"></i>
+                      Web Programming
+                    </h5>
+                    <ul class="course-topics">
+                      <li>Semantic HTML + modern CSS</li>
+                      <li>Responsive layouts (flex/grid)</li>
+                      <li>Accessibility + validator-first workflow</li>
+                    </ul>
+                  </article>
+                </div>
+              </div>
+
+              <div class="coursework-category">
+                <h4 class="category-title">
+                  <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+                  In-Class Work
+                </h4>
+                <ul class="coursework-links">
+                  <li><a href="#icw1"><i class="fas fa-sitemap" aria-hidden="true"></i> Activity 1: semantic layout</a></li>
+                  <li><a href="#icw2"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Activity 2: responsive CSS</a></li>
+                  <li><a href="#icw3"><i class="fas fa-universal-access" aria-hidden="true"></i> Activity 3: a11y checklist</a></li>
+                </ul>
+              </div>
+
+              <div class="coursework-category">
+                <h4 class="category-title">
+                  <i class="fas fa-layer-group" aria-hidden="true"></i>
+                  Coursework (CW)
+                </h4>
+                <ul class="coursework-links">
+                  <li><a href="#cw1"><i class="fas fa-pen-nib" aria-hidden="true"></i> CW01: HTML foundations</a></li>
+                  <li><a href="#cw2"><i class="fas fa-images" aria-hidden="true"></i> CW02: intro portfolio</a></li>
+                  <li><a href="#cw3"><i class="fas fa-table" aria-hidden="true"></i> CW03: tables &amp; forms</a></li>
+                </ul>
+              </div>
+
+              <div class="coursework-category">
+                <h4 class="category-title">
+                  <i class="fas fa-home" aria-hidden="true"></i>
+                  Homework (HW)
+                </h4>
+                <ul class="coursework-links">
+                  <li><a href="#hw1"><i class="fas fa-star" aria-hidden="true"></i> HW01: personal homepage</a></li>
+                  <li><a href="#hw2"><i class="fas fa-laptop-code" aria-hidden="true"></i> HW02: (planned)</a></li>
+                  <li><a href="#hw3"><i class="fas fa-clipboard-check" aria-hidden="true"></i> HW03: (planned)</a></li>
+                </ul>
+              </div>
+
+              <div class="coursework-category">
+                <h4 class="category-title">
+                  <i class="fas fa-rocket" aria-hidden="true"></i>
+                  Project Work (PW)
+                </h4>
+                <ul class="coursework-links">
+                  <li><a href="#pw1"><i class="fas fa-terminal" aria-hidden="true"></i> Project 1: CLI tool</a></li>
+                  <li><a href="#pw2"><i class="fas fa-chart-line" aria-hidden="true"></i> Project 2: dashboard</a></li>
+                  <li><a href="#pw3"><i class="fas fa-receipt" aria-hidden="true"></i> Project 3: expense tracker</a></li>
+                </ul>
+              </div>
+
+              <div class="coursework-category">
+                <h4 class="category-title" id="course-details-title">
+                  <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                  Details (anchors so every link works)
+                </h4>
+                <div class="assignment-grid">
+                  <article class="assignment" id="icw1">
+                    <h5 class="assignment-title">In-Class Activity 1: semantic layout</h5>
+                    <p class="small">Practice using header/nav/main/section/article/footer with clean heading hierarchy.</p>
+                  </article>
+                  <article class="assignment" id="icw2">
+                    <h5 class="assignment-title">In-Class Activity 2: responsive CSS</h5>
+                    <p class="small">Mobile-first layout using flex/grid + a couple of breakpoints.</p>
+                  </article>
+                  <article class="assignment" id="icw3">
+                    <h5 class="assignment-title">In-Class Activity 3: accessibility checklist</h5>
+                    <p class="small">Alt text, focus states, contrast, and semantic markup review.</p>
+                  </article>
+
+                  <article class="assignment" id="cw1">
+                    <h5 class="assignment-title">CW01: HTML foundations</h5>
+                    <p class="small">Basic page structure, lists, links, and clean formatting.</p>
+                  </article>
+                  <article class="assignment" id="cw2">
+                    <h5 class="assignment-title">CW02: intro portfolio</h5>
+                    <p class="small">Multi-page HTML portfolio with images, tables, multimedia, and validation.</p>
+                  </article>
+                  <article class="assignment" id="cw3">
+                    <h5 class="assignment-title">CW03: tables &amp; forms</h5>
+                    <p class="small">Planned: forms, inputs, labels, and data tables with meaningful captions.</p>
+                  </article>
+
+                  <article class="assignment" id="hw1">
+                    <h5 class="assignment-title">HW01: personal homepage</h5>
+                    <p class="small">This page: a central hub for coursework, links, and personal info (HTML + CSS).</p>
+                  </article>
+                  <article class="assignment" id="hw2">
+                    <h5 class="assignment-title">HW02</h5>
+                    <p class="small">Planned: will be added once released.</p>
+                  </article>
+                  <article class="assignment" id="hw3">
+                    <h5 class="assignment-title">HW03</h5>
+                    <p class="small">Planned: will be added once released.</p>
+                  </article>
+
+                  <article class="assignment" id="pw1">
+                    <h5 class="assignment-title">Project 1: CLI tool</h5>
+                    <p class="small">A small terminal-first tool focused on speed, clarity, and automation.</p>
+                  </article>
+                  <article class="assignment" id="pw2">
+                    <h5 class="assignment-title">Project 2: dashboard</h5>
+                    <p class="small">A UI for visualizing metrics with clean components and good UX.</p>
+                  </article>
+                  <article class="assignment" id="pw3">
+                    <h5 class="assignment-title">Project 3: expense tracker</h5>
+                    <p class="small">Track spending categories and trends with a simple, reliable workflow.</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <!-- Interests cards -->
+            <div id="interests" class="grid-heading">
+              <h2 class="grid-heading-title" id="interests-title">Interests</h2>
+              <div class="grid-heading-divider" aria-hidden="true"></div>
+            </div>
+
+            <article class="card">
+              <div class="card-badge"><i class="fas fa-heart" aria-hidden="true"></i> Outside class</div>
+              <h3 class="card-title">Hobbies &amp; interests</h3>
+              <ul class="styled-list">
+                <li>Playing and watching cricket</li>
+                <li>Algorithm practice</li>
+                <li>Side projects</li>
+                <li>Movies</li>
+                <li>Travel</li>
+              </ul>
+              <div class="mini-gallery">
+                <figure class="mini-figure">
+                  <img
+                    src="images/cricket-bat-ball.svg"
+                    alt="Illustration of a cricket bat and a red cricket ball"
+                    width="1200"
+                    height="700"
+                  >
+                  <figcaption class="small">Practice mindset</figcaption>
+                </figure>
+                <figure class="mini-figure">
+                  <img
+                    src="images/cricket-field.svg"
+                    alt="Illustration of a cricket field with a central pitch under a sunset glow"
+                    width="1200"
+                    height="700"
+                  >
+                  <figcaption class="small">Watching the game</figcaption>
+                </figure>
+              </div>
+              <p class="small">
+                Favorite shots: <strong>Upper cut</strong> (Sachin Tendulkar) and <strong>short‑arm jab</strong> (Virat
+                Kohli).
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-badge"><i class="fas fa-bullseye" aria-hidden="true"></i> 2026 goals</div>
+              <h3 class="card-title">Goals</h3>
+              <ol class="numbered-list">
+                <li>Publish small projects regularly</li>
+                <li>Keep improving HTML/CSS fundamentals</li>
+                <li>Become stronger at system design</li>
+                <li>Stay consistent with cricket practice</li>
+                <li>Collaborate more with peers</li>
+              </ol>
+            </article>
+
+            <article class="card">
+              <div class="card-badge"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</div>
+              <h3 class="card-title">Education</h3>
+              <p class="small">
+                Georgia State University &mdash; Master’s in Computer Science (2024&ndash;2026).
+              </p>
+              <p class="small">Focus: Full-stack engineering and AI/ML fundamentals.</p>
+            </article>
+
+            <div class="grid-heading">
+              <h2 class="grid-heading-title" id="dream-title">Dream Jobs</h2>
+              <div class="grid-heading-divider" aria-hidden="true"></div>
+            </div>
+
+            <article class="card">
+              <div class="card-badge"><i class="fas fa-code" aria-hidden="true"></i> Role</div>
+              <h3 class="card-title">Full-stack engineer</h3>
+              <p class="small">Build simple, fast UIs backed by reliable APIs.</p>
+            </article>
+            <article class="card">
+              <div class="card-badge"><i class="fas fa-robot" aria-hidden="true"></i> Role</div>
+              <h3 class="card-title">Applied ML engineer</h3>
+              <p class="small">Turn models into practical systems with clear evaluation.</p>
+            </article>
+            <article class="card">
+              <div class="card-badge"><i class="fas fa-rocket" aria-hidden="true"></i> Role</div>
+              <h3 class="card-title">Product builder</h3>
+              <p class="small">Ship small tools that remove friction from everyday workflows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section links-section" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 class="section-title" id="contact-title">Connect</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+          <p class="section-subtitle">Links for email and professional profiles</p>
+
+          <div class="links-grid">
+            <a href="https://cs.gsu.edu/" class="link-card" target="_blank" rel="noopener noreferrer">
+              <div class="link-icon" aria-hidden="true">🏫</div>
+              <h3>Computer Science Department</h3>
+              <p>Visit the department website</p>
+            </a>
+            <a href="https://www.linkedin.com/in/madkondaz/" class="link-card" target="_blank" rel="noopener noreferrer">
+              <div class="link-icon" aria-hidden="true">💼</div>
+              <h3>LinkedIn</h3>
+              <p>Connect with me professionally</p>
+            </a>
+            <a href="https://github.com/madkonda/" class="link-card" target="_blank" rel="noopener noreferrer">
+              <div class="link-icon" aria-hidden="true">🐙</div>
+              <h3>GitHub</h3>
+              <p>Check out my repositories</p>
+            </a>
+            <a href="mailto:msrkondaone@gmail.com" class="link-card">
+              <div class="link-icon" aria-hidden="true">📧</div>
+              <h3>Email Me</h3>
+              <p>Send me a message</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <p class="small">&copy; 2026 Madhu Sudhan Reddy Konda. Built for HW01.</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="mailto:msrkondaone@gmail.com">Email</a>
+          <a href="https://github.com/madkonda/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/madkondaz/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

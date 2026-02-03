@@ -1,0 +1,5 @@
+Full Name: Madhu Sudhan Reddy Konda
+Course Name & Section:  Web Programming class CSC 4370/6370 SPRING 2026
+Assignment: Coursework 02: Introduction to HTML
+Website URL: https://codd.cs.gsu.edu/~mkonda1/CW02/
+Site Topic: Simple portfolio
