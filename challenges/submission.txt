@@ -1,0 +1,10 @@
+Name: Madhu Sudhan Reddy Konda
+
+In-class CSS Challenges
+
+Live URLs:
+- Challenge 1: https://codd.cs.gsu.edu/~mkonda1/challenges/challenge1-animating-answer.html
+- Challenge 2: https://codd.cs.gsu.edu/~mkonda1/challenges/challenge2-ny-tshirt.html
+
+Notes:
+- Both pages use embedded CSS per instructions.

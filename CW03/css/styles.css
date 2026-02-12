@@ -1,0 +1,353 @@
+/* CW03 - styles.css
+   Inspired by common "dashboard" layouts, but customized (colors, spacing,
+   component names, and structure) to be unique for this assignment.
+
+   Exercise 1 requirement: use external CSS to set body text color to dark red.
+*/
+
+/* ===== Reset / base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Core theme (custom palette) */
+  --bg-0: #07111f;
+  --bg-1: #0b1b33;
+  --card: #f8fafc;
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, 0.70);
+
+  --brand: #2563eb;
+  --brand-2: #7c3aed;
+  --ring: rgba(37, 99, 235, 0.30);
+
+  --radius: 16px;
+  --radius-sm: 12px;
+  --shadow: 0 16px 40px rgba(2, 6, 23, 0.22);
+  --shadow-soft: 0 10px 24px rgba(2, 6, 23, 0.12);
+
+  /* Timetable */
+  --tt-border: rgba(15, 23, 42, 0.16);
+  --tt-head: #0f172a;
+  --tt-head-text: #f8fafc;
+  --tt-row: #ffffff;
+  --tt-row-alt: #f1f5f9;
+
+  --act-lecture: #dbeafe;
+  --act-lab: #dcfce7;
+  --act-study: #ede9fe;
+  --act-break: #ffedd5;
+  --act-sport: #ffe4e6;
+  --act-seminar: #fef9c3;
+}
+
+/* Exercise 1 (required): dark red via external CSS */
+body {
+  color: darkred;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background:
+    radial-gradient(900px 420px at 15% 12%, rgba(37, 99, 235, 0.25), transparent 62%),
+    radial-gradient(800px 380px at 85% 18%, rgba(124, 58, 237, 0.22), transparent 60%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+}
+
+/* Base layout (override body color for general readability) */
+.site {
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+a {
+  color: var(--brand);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--brand-2);
+}
+
+/* ===== Accessibility ===== */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #fff;
+  color: #000;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  z-index: 10;
+  outline: 3px solid var(--ring);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* ===== Header / nav ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(7, 17, 31, 0.70);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 14px 0;
+}
+
+.brand-title {
+  margin: 0;
+  color: rgba(248, 250, 252, 0.96);
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.brand-subtitle {
+  margin: 4px 0 0;
+  color: rgba(226, 232, 240, 0.82);
+  font-size: 0.95rem;
+}
+
+.top-nav {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+}
+
+.top-nav a {
+  color: rgba(226, 232, 240, 0.92);
+  text-decoration: none;
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: transform 120ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* ===== Main / cards ===== */
+.site-main {
+  padding: 22px 0 42px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+}
+
+.card.intro h1 {
+  margin: 0 0 10px;
+  letter-spacing: -0.2px;
+}
+
+.card-header h2 {
+  margin: 0 0 6px;
+}
+
+.muted {
+  margin: 0;
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.95rem;
+}
+
+.pill-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  background: linear-gradient(180deg, #eef2ff, #f5f3ff);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  color: #111827;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* Exercise 1 section: keep the dark red visible */
+#exercise-1 {
+  color: darkred;
+}
+
+.ex1-demo {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin: 12px 0 0;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Exercise 2: required answer container with box-shadow */
+.answer-box {
+  background-color: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  box-shadow: 0 10px 26px rgba(2, 6, 23, 0.12);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+  background: rgba(2, 6, 23, 0.06);
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+.answer-box pre code {
+  background: transparent;
+  padding: 0;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+/* ===== Exercise 5 - timetable ===== */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--tt-border);
+  background: #fff;
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.timetable caption {
+  caption-side: top;
+  padding: 12px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.timetable th,
+.timetable td {
+  padding: 12px 10px;
+  border-top: 1px solid var(--tt-border);
+  border-right: 1px solid var(--tt-border);
+  vertical-align: top;
+}
+
+.timetable tr > *:last-child {
+  border-right: none;
+}
+
+.timetable thead th {
+  position: sticky;
+  top: 0;
+  background: var(--tt-head);
+  color: var(--tt-head-text);
+  border-top: none;
+}
+
+.timetable tbody tr:nth-child(odd) th {
+  background: var(--tt-row);
+}
+
+.timetable tbody tr:nth-child(even) th {
+  background: var(--tt-row-alt);
+}
+
+.act {
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+.lecture {
+  background: var(--act-lecture);
+}
+
+.lab {
+  background: var(--act-lab);
+}
+
+.study {
+  background: var(--act-study);
+}
+
+.break {
+  background: var(--act-break);
+  font-style: italic;
+}
+
+.sport {
+  background: var(--act-sport);
+}
+
+.seminar {
+  background: var(--act-seminar);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 17, 31, 0.70);
+  backdrop-filter: blur(12px);
+  padding: 18px 0;
+}
+
+.site-footer p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+@media (min-width: 860px) {
+  .two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}

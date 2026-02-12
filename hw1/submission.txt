@@ -1,0 +1,11 @@
+Name: Madhu Sudhan Reddy Konda
+
+Live URL (HW1):
+- https://codd.cs.gsu.edu/~mkonda1/hw1/index.html
+
+GitHub Repository:
+- https://github.com/madkonda/Web-Course/tree/main/hw1
+
+Notes:
+- HW1 single-page homepage built with semantic HTML + external CSS. HTML and CSS validated (W3C).
+

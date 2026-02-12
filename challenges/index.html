@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Class CSS Challenges</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        color: #0f172a;
+        background: #f5f7fb;
+      }
+
+      .wrap {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 24px 16px 48px;
+      }
+
+      header {
+        background: #0b1b33;
+        color: #f8fafc;
+        padding: 18px 16px;
+      }
+
+      header .wrap {
+        padding: 0;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1.6rem;
+      }
+
+      .muted {
+        margin: 6px 0 0;
+        color: rgba(248, 250, 252, 0.82);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        border-radius: 14px;
+        padding: 16px;
+        box-shadow: 0 10px 22px rgba(2, 6, 23, 0.08);
+      }
+
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 1.15rem;
+      }
+
+      a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        background: rgba(2, 6, 23, 0.06);
+        padding: 2px 6px;
+        border-radius: 8px;
+      }
+
+      @media (min-width: 760px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>In-Class CSS Challenges</h1>
+        <p class="muted">Challenge 1: animation • Challenge 2: positioning + z-index</p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="grid">
+        <section class="card" aria-label="Challenge 1 link">
+          <h2>Challenge 1: Animating the Answer</h2>
+          <p>
+            Keyframes + animation delay + <code>animation-fill-mode: forwards</code>
+            and hover scale transition.
+          </p>
+          <p><a href="challenge1-animating-answer.html">Open Challenge 1</a></p>
+        </section>
+
+        <section class="card" aria-label="Challenge 2 link">
+          <h2>Challenge 2: I &hearts; NY T-Shirt</h2>
+          <p>
+            Absolute positioning on top of an image with <code>z-index</code>, plus
+            border/padding/margin and a box-shadow frame.
+          </p>
+          <p><a href="challenge2-ny-tshirt.html">Open Challenge 2</a></p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

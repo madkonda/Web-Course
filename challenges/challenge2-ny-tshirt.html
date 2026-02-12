@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2 - I ♥ NY T-Shirt</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: #f5f7fb;
+        color: #0f172a;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 28px 16px;
+      }
+
+      .page {
+        width: min(920px, 100%);
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.12);
+        border-radius: 18px;
+        padding: 22px 18px 26px;
+        box-shadow: 0 16px 34px rgba(2, 6, 23, 0.10);
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin: 0 0 18px;
+        color: rgba(15, 23, 42, 0.72);
+      }
+
+      /* Container (required: background color + nicer presentation) */
+      .shirt-container {
+        background: #eef2ff;
+        border-radius: 16px;
+        padding: 18px;
+        display: grid;
+        place-items: center;
+      }
+
+      /* Make absolute positioning reference this container */
+      .logo-stage {
+        position: relative;
+        display: inline-block;
+      }
+
+      img {
+        /* Required: relative positioning and shift 10px right */
+        position: relative;
+        left: 10px;
+
+        width: min(540px, 100%);
+        height: auto;
+
+        /* Final step: frame + spacing + shadow */
+        border: 3px solid #0b1220; /* black border */
+        padding: 10px; /* space between border and image */
+        margin: 8px; /* space around image */
+        border-radius: 14px;
+        box-shadow: 0 14px 28px rgba(2, 6, 23, 0.18);
+        background: #fff;
+        display: block;
+      }
+
+      .words {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 60px;
+        letter-spacing: 1px;
+        color: #111827;
+        z-index: 2; /* place over the shirt */
+        user-select: none;
+      }
+
+      .first {
+        /* Required: absolute positioning - I on left, side by side with heart, centered */
+        position: absolute;
+        left: 238px;
+        top: 155px;
+        z-index: 3;
+      }
+
+      .heart {
+        color: red;
+        font-size: 80px;
+
+        /* Required: absolute positioning - heart right next to I, no gap, centered */
+        position: absolute;
+        left: 256px;
+        top: 140px;
+        z-index: 3;
+        user-select: none;
+      }
+
+      .last {
+        /* Required: absolute positioning - NY block centered below I and heart */
+        position: absolute;
+        left: 238px;
+        top: 230px;
+        z-index: 3;
+      }
+
+      .letter-n {
+        /* N exactly below I */
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .letter-y {
+        /* Y exactly below heart, no gap after N */
+        position: absolute;
+        left: 45px;
+        top: 0;
+      }
+
+      .back {
+        margin-top: 18px;
+        display: inline-block;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .back:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 520px) {
+        .words {
+          font-size: 44px;
+        }
+
+        .heart {
+          font-size: 62px;
+        }
+
+        /* Reposition for smaller shirt size - centered */
+        .first {
+          left: 168px;
+          top: 110px;
+        }
+
+        .heart {
+          left: 186px;
+          top: 98px;
+        }
+
+        .last {
+          left: 168px;
+          top: 175px;
+        }
+
+        .letter-n {
+          left: 0;
+          top: 0;
+        }
+
+        .letter-y {
+          left: 45px;
+          top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <h1>Challenge 2: I &hearts; NY T-Shirt</h1>
+      <p>
+        This uses <strong>position</strong> and <strong>z-index</strong> to place text on top of the shirt image,
+        then adds a border frame and a box shadow.
+      </p>
+
+      <div class="shirt-container">
+        <div class="logo-stage" aria-label="I love NY logo on shirt">
+          <span class="first words">I</span>
+          <span class="heart">&hearts;</span>
+          <span class="last">
+            <span class="letter-n words">N</span>
+            <span class="letter-y words">Y</span>
+          </span>
+
+          <div>
+            <img src="shirt.png" alt="White t-shirt">
+          </div>
+        </div>
+      </div>
+
+      <a class="back" href="index.html">Back to challenges index</a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+Name: Madhu Sudhan Reddy Konda
+
+Assignment: CW03 — CSS Basics (Exercises 1–5)
+
+Live URL:
+- https://codd.cs.gsu.edu/~mkonda1/CW03/index.html
+
+Notes:
+- Single index page with Exercises 1–5.
+- External CSS: css/styles.css and css/lyrics.css.

@@ -1,0 +1,59 @@
+/* CW03 - lyrics.css (Exercise 4)
+   Scoped to .lyrics-page so it only affects Exercise 3 content.
+*/
+
+.lyrics-page {
+  background-color: chocolate;
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.lyrics-page .artist {
+  font-size: 14pt;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: moccasin;
+  margin: 0 0 6px;
+}
+
+.lyrics-page .song-title {
+  font-size: 14pt;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: khaki;
+  margin: 0 0 2px;
+}
+
+.lyrics-page .album {
+  font-size: 12pt;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: khaki;
+  margin: 0 0 2px;
+}
+
+.lyrics-page .year {
+  font-size: 12pt;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: ivory;
+  margin: 0 0 12px;
+}
+
+.lyrics-page .verse {
+  font-size: 14pt;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: gold;
+  margin: 10px 2cm;
+}
+
+.lyrics-page .chorus {
+  font-size: 14pt;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: gold;
+  margin: 10px 4cm;
+}

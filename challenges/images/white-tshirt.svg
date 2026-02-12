@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520" role="img" aria-label="White t-shirt illustration">
+  <defs>
+    <linearGradient id="shirtShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0b1220" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="700" height="520" fill="transparent"/>
+
+  <!-- Shirt -->
+  <g filter="url(#softShadow)">
+    <path
+      d="M235 78
+         C260 44, 295 28, 350 28
+         C405 28, 440 44, 465 78
+         L540 120
+         C560 132, 565 156, 552 174
+         L508 236
+         C497 251, 478 257, 461 249
+         L452 244
+         L452 458
+         C452 476, 438 490, 420 490
+         L280 490
+         C262 490, 248 476, 248 458
+         L248 244
+         L239 249
+         C222 257, 203 251, 192 236
+         L148 174
+         C135 156, 140 132, 160 120
+         Z"
+      fill="url(#shirtShade)"
+      stroke="#cbd5e1"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+
+    <!-- Collar cutout -->
+    <path
+      d="M290 76
+         C303 60, 323 48, 350 48
+         C377 48, 397 60, 410 76
+         C396 98, 377 110, 350 110
+         C323 110, 304 98, 290 76
+         Z"
+      fill="#eef2f7"
+      stroke="#cbd5e1"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>

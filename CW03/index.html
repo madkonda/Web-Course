@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CW03 — CSS Basics: Exercises 1–5 (external stylesheets, debugging CSS, lyrics styling, and a school timetable).">
+    <title>CW03 - CSS Basics (Exercises 1–5)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/lyrics.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <div class="brand">
+          <p class="brand-title">CW 03 — CSS Basics</p>
+          <p class="brand-subtitle">Exercises 1–5 (All answers on one page)</p>
+        </div>
+
+        <nav class="top-nav" aria-label="CW03 quick links">
+          <a href="#exercise-1">Exercise 1</a>
+          <a href="#exercise-2">Exercise 2</a>
+          <a href="#exercise-3">Exercise 3</a>
+          <a href="#exercise-4">Exercise 4</a>
+          <a href="#exercise-5">Exercise 5</a>
+          <a href="#submission">Submission</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <div class="wrap site">
+        <section class="card intro" aria-label="Assignment overview">
+          <h1>CSS Assignment: Working with CSS (Part 1)</h1>
+          <p>
+            This page contains answers for <strong>Exercises 1–5</strong>. All CSS is written in
+            external stylesheets for cleaner HTML and easier maintenance.
+          </p>
+          <ul class="pill-list" aria-label="What is included">
+            <li class="pill">External stylesheet usage</li>
+            <li class="pill">Debugging 3 CSS mistakes</li>
+            <li class="pill">Song lyrics formatting (verse/chorus)</li>
+            <li class="pill">External <code>lyrics.css</code></li>
+            <li class="pill">School timetable design (table + CSS)</li>
+          </ul>
+        </section>
+
+        <!-- Exercise 1 -->
+        <section id="exercise-1" class="card">
+          <header class="card-header">
+            <h2>Exercise 1: External Style Sheet</h2>
+            <p class="muted">Goal: change text color to dark red using external CSS.</p>
+          </header>
+
+          <div class="answer-box">
+            <p>
+              In <code>css/styles.css</code>, the <code>body</code> text color is set to
+              <strong>dark red</strong>. The rest of this page overrides that color for readability,
+              but this exercise section intentionally displays the dark-red text.
+            </p>
+
+            <p class="ex1-demo">
+              This paragraph demonstrates the <strong>dark red</strong> text color applied via an external stylesheet.
+            </p>
+
+            <details>
+              <summary>Show the HTML link tag used</summary>
+              <pre><code>&lt;link rel="stylesheet" href="css/styles.css"&gt;</code></pre>
+            </details>
+          </div>
+        </section>
+
+        <!-- Exercise 2 -->
+        <section id="exercise-2" class="card">
+          <header class="card-header">
+            <h2>Exercise 2: Debugging CSS Code</h2>
+            <p class="muted">Task: identify and fix 3 common CSS mistakes.</p>
+          </header>
+
+          <div class="two-col">
+            <div class="answer-box">
+              <h3>Original buggy CSS (given)</h3>
+              <pre><code>/* Mistake 1 */
+body {
+    font-family: "Times New Roman";
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: justify;
+    background: ivory;
+    color: red
+}
+
+/* Mistake 2 */
+h1, h2, h3 {
+    color: #ff0000;
+    font-size: 2.5em;
+    margin: 20px 0px 20px 0px;
+}
+
+/* Mistake 3 */
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box
+}
+
+a {
+    color: #0000FF;
+    text-decoration: underline;
+}</code></pre>
+            </div>
+
+            <div class="answer-box">
+              <h3>Answers (3 mistakes) + fixes</h3>
+              <ol>
+                <li>
+                  <strong>Mistake 1</strong>: <code>font-family</code> has no fallback font.
+                  <br>
+                  <strong>Fix</strong>: add a generic fallback like <code>serif</code>.
+                </li>
+                <li>
+                  <strong>Mistake 2</strong>: missing semicolon after <code>color: red</code> in <code>body</code>.
+                  <br>
+                  <strong>Fix</strong>: <code>color: red;</code>
+                </li>
+                <li>
+                  <strong>Mistake 3</strong>: missing semicolon after <code>box-sizing: border-box</code>.
+                  <br>
+                  <strong>Fix</strong>: <code>box-sizing: border-box;</code>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="answer-box">
+            <h3>Corrected CSS</h3>
+            <pre><code>body {
+  font-family: "Times New Roman", serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: justify;
+  background: ivory;
+  color: red;
+}
+
+h1, h2, h3 {
+  color: #ff0000;
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+a {
+  color: #0000ff;
+  text-decoration: underline;
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Exercise 3 -->
+        <section id="exercise-3" class="card">
+          <header class="card-header">
+            <h2>Exercise 3: Song Lyrics Styling</h2>
+            <p class="muted">
+              Task: style lyrics using the required classes
+              (<code>.artist</code>, <code>.song-title</code>, <code>.album</code>, <code>.year</code>, <code>.verse</code>, <code>.chorus</code>).
+            </p>
+          </header>
+
+          <div class="lyrics-page" role="region" aria-label="Song lyrics example">
+            <p class="artist">Blinding Lights</p>
+            <p class="song-title">The Weeknd</p>
+            <p class="album">After Hours</p>
+            <p class="year">2020</p>
+
+            <p class="verse">
+              I been tryna call, I been on my own for long enough
+            </p>
+            <p class="verse">
+              Maybe you can show me how to love, maybe
+            </p>
+            <p class="chorus">
+              I'm going through a crisis, I thought I'd see the light<br>
+              But there's nothing but blinding lights
+            </p>
+            <p class="verse">
+              I'm looking for something that I can't see
+            </p>
+            <p class="verse">
+              Maybe you can show it to me, maybe
+            </p>
+            <p class="chorus">
+              I'm going through a crisis, I thought I'd see the light<br>
+              But there's nothing but blinding lights
+            </p>
+          </div>
+        </section>
+
+        <!-- Exercise 4 -->
+        <section id="exercise-4" class="card">
+          <header class="card-header">
+            <h2>Exercise 4: External Stylesheet (lyrics.css)</h2>
+            <p class="muted">Goal: move lyrics styles into an external stylesheet.</p>
+          </header>
+
+          <div class="answer-box">
+            <p>
+              The lyrics styling is stored in <code>css/lyrics.css</code> (external file). It is linked
+              from this page using:
+            </p>
+            <pre><code>&lt;link rel="stylesheet" href="css/lyrics.css"&gt;</code></pre>
+            <p>
+              To avoid affecting the entire page, the selectors in <code>lyrics.css</code> are scoped to
+              the <code>.lyrics-page</code> container used in Exercise 3.
+            </p>
+          </div>
+        </section>
+
+        <!-- Exercise 5 -->
+        <section id="exercise-5" class="card">
+          <header class="card-header">
+            <h2>Exercise 5: School Website Design (Timetable)</h2>
+            <p class="muted">Task: create a simple timetable using HTML tables + external CSS.</p>
+          </header>
+
+          <div class="answer-box">
+            <p>
+              Below is a sample weekly timetable with color-coded activities. The layout uses a table for structure
+              and CSS variables for a consistent color theme.
+            </p>
+          </div>
+
+          <div class="table-wrap" role="region" aria-label="Weekly timetable" tabindex="0">
+            <table class="timetable">
+              <caption>Sample Weekly Timetable (School Website)</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Time</th>
+                  <th scope="col">Monday</th>
+                  <th scope="col">Tuesday</th>
+                  <th scope="col">Wednesday</th>
+                  <th scope="col">Thursday</th>
+                  <th scope="col">Friday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">9:00–10:15</th>
+                  <td class="act lecture">Web Programming</td>
+                  <td class="act lab">Database Lab</td>
+                  <td class="act lecture">Operating Systems</td>
+                  <td class="act lecture">Data Structures</td>
+                  <td class="act seminar">Career Seminar</td>
+                </tr>
+                <tr>
+                  <th scope="row">10:30–11:45</th>
+                  <td class="act lab">Web Lab</td>
+                  <td class="act lecture">Computer Networks</td>
+                  <td class="act lab">OS Lab</td>
+                  <td class="act lecture">Database Systems</td>
+                  <td class="act lecture">Discrete Math</td>
+                </tr>
+                <tr>
+                  <th scope="row">12:00–1:00</th>
+                  <td class="act break">Lunch Break</td>
+                  <td class="act break">Lunch Break</td>
+                  <td class="act break">Lunch Break</td>
+                  <td class="act break">Lunch Break</td>
+                  <td class="act break">Lunch Break</td>
+                </tr>
+                <tr>
+                  <th scope="row">1:15–2:30</th>
+                  <td class="act study">Study / Assignments</td>
+                  <td class="act lecture">Web Programming</td>
+                  <td class="act study">Project Work</td>
+                  <td class="act lab">Networks Lab</td>
+                  <td class="act study">Practice Problems</td>
+                </tr>
+                <tr>
+                  <th scope="row">3:00–4:30</th>
+                  <td class="act sport">Cricket Practice</td>
+                  <td class="act study">Reading / Notes</td>
+                  <td class="act sport">Gym / Walk</td>
+                  <td class="act study">Group Study</td>
+                  <td class="act sport">Cricket (Match)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="muted small">
+            Note: Tables are great for schedule data because it is naturally row/column structured. For small screens,
+            the container scrolls horizontally so the table remains readable.
+          </p>
+        </section>
+
+        <!-- Submission -->
+        <section id="submission" class="card">
+          <header class="card-header">
+            <h2>Submission</h2>
+            <p class="muted">Upload a text/Word file with your hosted URL.</p>
+          </header>
+
+          <div class="answer-box">
+            <p>
+              When you upload this folder to Codd, your URL will look like one of these (depending on where you place it):
+            </p>
+            <ul>
+              <li><code>https://codd.cs.gsu.edu/~mkonda1/CW03/index.html</code></li>
+            </ul>
+            <p>
+              Update <code>CW03/submission.txt</code> with the correct live URL and submit that file to iCollege.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          &copy; 2026 CW03 — CSS Basics. Built with HTML5 + external CSS.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

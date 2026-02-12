@@ -1,0 +1,1562 @@
+/* Moonlit Hearts - main stylesheet */
+
+/* ---------------- Base Theme ---------------- */
+:root {
+  --cupid-pink: #ffafcc;
+  --valentine-red: #ff4d6d;
+  --love-purple: #c77dff;
+  --chocolate: #7b3f00;
+  --vanilla: #fffaf0;
+  --blush: #fde2e4;
+  --rose-gold: #e0bfb8;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--chocolate);
+  background: linear-gradient(135deg, var(--vanilla) 0%, var(--blush) 100%);
+  background-attachment: fixed;
+  padding-bottom: var(--space-xl);
+}
+
+a {
+  color: var(--valentine-red);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--love-purple);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ---------------- Header / Nav ---------------- */
+.site-header {
+  background: linear-gradient(
+    135deg,
+    var(--valentine-red) 0%,
+    var(--love-purple) 100%
+  );
+  color: #fff;
+  padding: var(--space-xl) 0 var(--space-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.12) 2%,
+      transparent 12%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.12) 2%,
+      transparent 12%
+    );
+  pointer-events: none;
+}
+
+.hero-title {
+  position: relative;
+  font-family: "Great Vibes", "Georgia", serif;
+  font-size: clamp(2.8rem, 5vw, 3.6rem);
+  margin-bottom: var(--space-xs);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-subtitle {
+  position: relative;
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto var(--space-md);
+  opacity: 0.94;
+}
+
+.heart-float {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+}
+
+.heart-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.heart-2 {
+  top: 14%;
+  right: 14%;
+  animation-delay: 1s;
+}
+.heart-3 {
+  bottom: 16%;
+  left: 18%;
+  animation-delay: 2s;
+}
+.heart-4 {
+  bottom: 8%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+.nav-pills {
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  padding: var(--space-xs);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.nav-pills a {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.93rem;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.nav-pills a:hover,
+.nav-pills a:focus-visible {
+  outline: none;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ---------------- Layout Cards ---------------- */
+.shell-card {
+  background-color: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+  border-left: 5px solid var(--valentine-red);
+}
+
+.shell-card h2 {
+  color: var(--valentine-red);
+  font-size: 1.7rem;
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.shell-card h3 {
+  color: var(--love-purple);
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.pill {
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background-color: var(--cupid-pink);
+  color: var(--chocolate);
+  font-size: 0.85rem;
+}
+
+/* Generic button */
+.btn {
+  display: inline-block;
+  background-color: var(--valentine-red);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  outline: none;
+  background-color: var(--love-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 77, 109, 0.45);
+}
+
+.btn-secondary {
+  background-color: var(--cupid-pink);
+  color: var(--chocolate);
+}
+
+/* ---------------- Story Pages ---------------- */
+.storybook {
+  margin-top: var(--space-lg);
+}
+
+.page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.page-tabs a {
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--rose-gold);
+  background-color: var(--vanilla);
+  font-size: 0.9rem;
+}
+
+.page-tabs a:hover,
+.page-tabs a:focus-visible {
+  background-color: var(--cupid-pink);
+}
+
+.page {
+  display: none;
+  background-color: #fff;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.page--default {
+  display: block;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 10% 0,
+      rgba(255, 175, 204, 0.18) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(199, 125, 255, 0.16) 0,
+      transparent 55%
+    );
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.page-inner {
+  position: relative;
+}
+
+.page-title {
+  font-family: "Great Vibes", "Georgia", serif;
+  font-size: 2.2rem;
+  margin-bottom: var(--space-xs);
+  color: var(--valentine-red);
+}
+
+.page-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.82rem;
+  color: var(--love-purple);
+  margin-bottom: var(--space-sm);
+}
+
+.page-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.story-copy p + p {
+  margin-top: var(--space-sm);
+}
+
+.story-tagline {
+  margin-top: var(--space-md);
+  padding-left: var(--space-md);
+  border-left: 3px solid var(--cupid-pink);
+  font-style: italic;
+}
+
+.scene-card {
+  background-color: var(--vanilla);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  border: 1px solid var(--rose-gold);
+}
+
+.scene-card h4 {
+  margin-bottom: var(--space-sm);
+  color: var(--love-purple);
+}
+
+.scene-list {
+  padding-left: 1.1rem;
+}
+
+.scene-list li + li {
+  margin-top: 0.15rem;
+}
+
+/* Scene helper grid (valentine-scenes) */
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.scene-block {
+  background-color: var(--vanilla);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  border-left: 4px solid var(--cupid-pink);
+}
+
+.scene-block h3 {
+  color: var(--love-purple);
+  margin-bottom: var(--space-sm);
+  font-size: 1.1rem;
+}
+
+.link-row {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+/* ---------------- Town square splash scene ---------------- */
+.town-square-card .town-scene {
+  position: relative;
+  margin-top: var(--space-md);
+  height: 230px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: linear-gradient(
+    to top,
+    #f4e4e8 0,
+    #f4e4e8 38%,
+    #e0f2ff 60%,
+    #c4d9ff 100%
+  );
+  border: 1px solid var(--rose-gold);
+}
+
+.town-sky,
+.town-ground {
+  position: absolute;
+  inset: 0;
+}
+
+.town-ground {
+  top: 42%;
+}
+
+.town-road {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(to top, #4b5563 0, #6b7280 40%, transparent 100%);
+}
+
+/* Clouds (weather) */
+.town-cloud {
+  position: absolute;
+  width: 90px;
+  height: 38px;
+  border-radius: 999px;
+  background: #f9fafb;
+  box-shadow: 18px 8px 0 #f9fafb, 40px -4px 0 #f9fafb;
+  opacity: 0.9;
+  animation: cloud-drift 32s linear infinite;
+}
+
+.town-cloud.cloud-1 {
+  top: 10%;
+  left: -25%;
+  animation-duration: 34s;
+}
+
+.town-cloud.cloud-2 {
+  top: 4%;
+  left: -45%;
+  animation-duration: 40s;
+}
+
+.town-cloud.cloud-3 {
+  top: 20%;
+  left: -35%;
+  animation-duration: 36s;
+}
+
+/* Cupid (Valentine theme) */
+.town-cupid {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--valentine-red);
+  top: 25%;
+  left: -10%;
+  box-shadow: 0 0 12px rgba(255, 77, 109, 0.8);
+  animation: cupid-fly 18s linear infinite;
+}
+
+.town-cupid::before,
+.town-cupid::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid #f9fafb;
+  border-color: #f9fafb transparent transparent #f9fafb;
+}
+
+.town-cupid::before {
+  right: 100%;
+  top: 2px;
+  transform: rotate(-18deg);
+}
+
+.town-cupid::after {
+  left: 100%;
+  top: 2px;
+  transform: rotate(18deg);
+}
+
+/* Birds (animals) */
+.town-bird {
+  position: absolute;
+  width: 22px;
+  height: 12px;
+  border-radius: 12px 12px 0 0;
+  background: #111827;
+  top: 32%;
+  left: -15%;
+  animation: bird-glide 26s linear infinite;
+}
+
+.town-bird::before,
+.town-bird::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 12px;
+  border-radius: 50%;
+  border: 3px solid #111827;
+  border-color: #111827 transparent transparent transparent;
+}
+
+.town-bird::before {
+  left: -2px;
+  top: -8px;
+}
+
+.town-bird::after {
+  right: -2px;
+  top: -8px;
+}
+
+.town-bird.bird-2 {
+  top: 18%;
+  animation-delay: -8s;
+}
+
+/* Bench couple + tree (human activity) */
+.town-tree {
+  position: absolute;
+  left: 8%;
+  bottom: 18%;
+  width: 32px;
+  height: 60px;
+  background: #92400e;
+  border-radius: 6px;
+}
+
+.town-tree::before {
+  content: "";
+  position: absolute;
+  bottom: 36px;
+  left: -18px;
+  width: 70px;
+  height: 60px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #f9fafb, #22c55e);
+}
+
+.town-bench-couple {
+  position: absolute;
+  left: 22%;
+  bottom: 14%;
+  width: 90px;
+  height: 18px;
+  background: #78350f;
+  border-radius: 6px;
+  box-shadow: 0 10px 0 #451a03;
+}
+
+.town-bench-couple::before,
+.town-bench-couple::after {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  width: 18px;
+  height: 26px;
+  border-radius: 6px;
+  background: #f97316;
+}
+
+.town-bench-couple::before {
+  left: 6px;
+}
+.town-bench-couple::after {
+  right: 6px;
+  background: #ec4899;
+}
+
+/* Walking pedestrian (human + realistic movement) */
+.town-ped {
+  position: absolute;
+  bottom: 18%;
+  left: -10%;
+  width: 18px;
+  height: 34px;
+  background: #1d4ed8;
+  border-radius: 6px 6px 4px 4px;
+  animation: ped-walk 22s linear infinite;
+}
+
+.town-ped::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fee2e2;
+}
+
+/* Car (vehicle) */
+.town-car {
+  position: absolute;
+  bottom: 6%;
+  left: -30%;
+  width: 120px;
+  height: 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  box-shadow: 0 4px 0 rgba(15, 23, 42, 0.9);
+  animation: car-drive 26s linear infinite;
+}
+
+.town-car::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 12px;
+  width: 70px;
+  height: 22px;
+  border-radius: 14px 14px 4px 4px;
+  background: #e5f2ff;
+}
+
+.town-car::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -10px;
+  height: 16px;
+  background-image: radial-gradient(circle at 0 50%, #020617 6px, transparent 7px),
+    radial-gradient(circle at 100% 50%, #020617 6px, transparent 7px);
+}
+
+/* Balloons (objects upward) */
+.town-balloon {
+  position: absolute;
+  width: 14px;
+  height: 20px;
+  border-radius: 50% 50% 45% 45%;
+  background: var(--valentine-red);
+  bottom: 10%;
+  left: 40%;
+  animation: balloon-rise 18s ease-in-out infinite;
+}
+
+.town-balloon::before {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  width: 1px;
+  height: 24px;
+  background: #374151;
+  transform: translateX(-50%);
+}
+
+.town-balloon.balloon-2 {
+  left: 52%;
+  background: var(--love-purple);
+  animation-duration: 22s;
+  animation-delay: -4s;
+}
+
+/* Confetti hearts (Valentine particles) */
+.town-confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  color: var(--valentine-red);
+  animation: confetti-fall 10s linear infinite;
+}
+
+.town-confetti::before,
+.town-confetti::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  border-radius: 6px 6px 0 0;
+  background: currentColor;
+}
+
+.town-confetti::before {
+  transform: rotate(-45deg);
+  left: 0;
+}
+
+.town-confetti::after {
+  transform: rotate(45deg);
+  right: 0;
+}
+
+.town-confetti.confetti-1 {
+  left: 65%;
+  top: -10%;
+}
+.town-confetti.confetti-2 {
+  left: 74%;
+  top: -18%;
+  animation-delay: -3s;
+}
+.town-confetti.confetti-3 {
+  left: 82%;
+  top: -22%;
+  animation-delay: -6s;
+}
+
+/* ---------------- Moonlit park splash scene ---------------- */
+.moon-park-card .park-hearts-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.moon-park-card .park-hearts-label {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.moon-scene {
+  position: relative;
+  margin-top: var(--space-sm);
+  height: 320px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(131, 24, 67, 0.25);
+  background: linear-gradient(180deg, #0b1029 0%, #161b42 48%, #27325f 100%);
+}
+
+.moon-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 120%, rgba(0, 0, 0, 0.35), transparent 55%);
+}
+
+.moon-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  top: 14px;
+  right: 70px;
+  background: radial-gradient(circle, rgba(255, 248, 220, 0.42) 0%, rgba(255, 248, 220, 0.04) 65%, transparent 72%);
+}
+
+.moon-disc {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  top: 56px;
+  right: 116px;
+  background: radial-gradient(circle at 30% 30%, #fffef7, #f9e7b7);
+  box-shadow: 0 0 20px rgba(255, 245, 203, 0.85);
+}
+
+.moon-fireworks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.moon-fireworks .burst {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  opacity: 0;
+}
+
+.moon-fireworks .burst::before,
+.moon-fireworks .burst::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.moon-fireworks .burst::before {
+  width: 48px;
+  height: 48px;
+  left: -23px;
+  top: -23px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 1px, transparent 2px) 0 0 / 12px 12px,
+    radial-gradient(circle, rgba(244, 114, 182, 0.9) 0 1px, transparent 2px) 6px 6px / 12px 12px;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.85));
+}
+
+.moon-fireworks .burst::after {
+  width: 70px;
+  height: 2px;
+  left: -34px;
+  top: 0;
+  background: linear-gradient(90deg, transparent, #fde68a, transparent);
+  transform: rotate(0deg);
+  box-shadow: 0 0 0 #fde68a;
+}
+
+.moon-fireworks .b1 { left: 32%; top: 20%; animation: fireworks-show 42s ease-in-out infinite; }
+.moon-fireworks .b2 { left: 40%; top: 15%; animation: fireworks-show 42s ease-in-out infinite 0.7s; }
+.moon-fireworks .b3 { left: 47%; top: 24%; animation: fireworks-show 42s ease-in-out infinite 1.2s; }
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fefce8;
+  box-shadow: 0 0 8px rgba(255, 255, 240, 0.9);
+  animation: star-twinkle 2.8s ease-in-out infinite;
+}
+
+.star.s1 { top: 28px; left: 16%; animation-delay: -0.3s; }
+.star.s2 { top: 56px; left: 28%; animation-delay: -1.4s; }
+.star.s3 { top: 42px; left: 54%; animation-delay: -0.9s; }
+.star.s4 { top: 68px; left: 78%; animation-delay: -2.1s; }
+.star.s5 { top: 22px; left: 86%; animation-delay: -1.8s; }
+
+.shooting-star {
+  position: absolute;
+  top: 40px;
+  left: -20%;
+  width: 65px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff);
+  transform: rotate(-18deg);
+  opacity: 0;
+  animation: shooting-star 11s ease-in-out infinite;
+}
+
+.moon-cloud {
+  position: absolute;
+  width: 95px;
+  height: 30px;
+  border-radius: 999px;
+  background: rgba(240, 245, 255, 0.9);
+  box-shadow: 16px 6px 0 rgba(240, 245, 255, 0.9), 38px -3px 0 rgba(240, 245, 255, 0.9);
+  animation: moon-cloud-drift 36s linear infinite;
+}
+
+.moon-cloud.cloud-a {
+  top: 26px;
+  left: -25%;
+  animation-duration: 34s;
+}
+.moon-cloud.cloud-b {
+  top: 76px;
+  left: -45%;
+  animation-duration: 42s;
+}
+.moon-cloud.cloud-c {
+  top: 40px;
+  left: -60%;
+  animation-duration: 38s;
+}
+
+.night-mist {
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  bottom: 34%;
+  height: 36px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(220,230,255,0.26), rgba(255,255,255,0));
+  filter: blur(3px);
+  animation: mist-drift 18s linear infinite;
+}
+
+.firefly {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fef08a;
+  box-shadow: 0 0 8px #fef08a, 0 0 14px #fef08a;
+  animation: firefly-blink 2.4s ease-in-out infinite;
+}
+
+.firefly.f1 { top: 138px; left: 22%; animation-delay: -0.4s; }
+.firefly.f2 { top: 118px; left: 30%; animation-delay: -1s; }
+.firefly.f3 { top: 146px; left: 42%; animation-delay: -1.6s; }
+.firefly.f4 { top: 132px; left: 58%; animation-delay: -0.8s; }
+.firefly.f5 { top: 112px; left: 68%; animation-delay: -1.9s; }
+
+.park-tree {
+  position: absolute;
+  bottom: 40px;
+  width: 26px;
+  height: 70px;
+  background: #4a2b14;
+  border-radius: 6px;
+  transform-origin: 50% 100%;
+  animation: tree-sway 5s ease-in-out infinite;
+}
+
+.park-tree::before {
+  content: "";
+  position: absolute;
+  bottom: 45px;
+  left: -18px;
+  width: 62px;
+  height: 52px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, #8bf4c0, #1d7f5c);
+}
+
+.park-tree.tree-left { left: 10%; }
+.park-tree.tree-right { right: 9%; animation-delay: -1.8s; }
+
+.park-path {
+  position: absolute;
+  bottom: 0;
+  left: -8%;
+  width: 116%;
+  height: 44%;
+  background: linear-gradient(to top, #192130 0%, #29324b 62%, transparent 100%);
+}
+
+.park-bench {
+  position: absolute;
+  left: 24%;
+  bottom: 74px;
+  width: 86px;
+  height: 12px;
+  border-radius: 5px;
+  background: #7c3a18;
+  box-shadow: 0 8px 0 #4a2b14;
+}
+
+.park-bench::after {
+  content: "✨ ♥ ✨";
+  position: absolute;
+  left: 16px;
+  top: -28px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #fda4af;
+  opacity: 0;
+  animation: bench-spark 42s ease-in-out infinite;
+}
+
+.park-lamp {
+  position: absolute;
+  left: 74%;
+  bottom: 56px;
+  width: 8px;
+  height: 90px;
+  border-radius: 6px;
+  background: #111827;
+}
+
+.park-lamp::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -7px;
+  width: 22px;
+  height: 18px;
+  border-radius: 8px 8px 6px 6px;
+  background: #fef3c7;
+  box-shadow: 0 0 14px rgba(255, 250, 220, 0.9);
+  animation: lamp-flicker 2.2s ease-in-out infinite;
+}
+
+.walking-couple {
+  position: absolute;
+  left: -20%;
+  bottom: 58px;
+  width: 48px;
+  height: 44px;
+  animation: couple-walk 42s ease-in-out infinite;
+  z-index: 3;
+}
+
+.walking-couple::after {
+  content: "♥";
+  position: absolute;
+  top: -18px;
+  left: 15px;
+  color: #fb7185;
+  font-size: 11px;
+  animation: mini-heartbeat 1.6s ease-in-out infinite;
+}
+
+.walker {
+  position: absolute;
+  bottom: 0;
+  width: 18px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+.walker::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fee2e2;
+  transform-origin: 50% 100%;
+  animation: head-look 20s ease-in-out infinite;
+}
+
+.walker.w1 {
+  left: 0;
+  background: #fb923c;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18);
+}
+
+.walker.w2 {
+  right: 0;
+  background: #f472b6;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18);
+}
+
+.park-dog {
+  position: absolute;
+  left: -24%;
+  bottom: 52px;
+  width: 24px;
+  height: 14px;
+  border-radius: 8px;
+  background: #8b5a2b;
+  animation: dog-run 42s ease-in-out infinite;
+  z-index: 3;
+}
+
+.park-dog::before {
+  content: "";
+  position: absolute;
+  right: -7px;
+  top: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8b5a2b;
+}
+
+.park-dog::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 2px;
+  width: 8px;
+  height: 3px;
+  border-radius: 6px;
+  background: #8b5a2b;
+  transform-origin: 100% 50%;
+  animation: tail-wag 0.35s ease-in-out infinite alternate;
+}
+
+.romance-glow {
+  position: absolute;
+  left: 42%;
+  bottom: 86px;
+  width: 70px;
+  height: 22px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 165, 190, 0.45), rgba(255, 165, 190, 0));
+  filter: blur(1.5px);
+  animation: glow-pulse 3.2s ease-in-out infinite;
+}
+
+.bike-rider {
+  position: absolute;
+  right: -18%;
+  bottom: 44px;
+  width: 72px;
+  height: 36px;
+  opacity: 0.82;
+  animation: bike-pass 18s linear infinite;
+}
+
+.bike-rider::before,
+.bike-rider::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid #111827;
+}
+
+.bike-rider::before { left: 0; }
+.bike-rider::after { right: 0; }
+
+.bike-rider span {
+  display: none;
+}
+
+.bike-rider {
+  background:
+    linear-gradient(#111827, #111827) 16px 10px / 38px 3px no-repeat,
+    linear-gradient(#111827, #111827) 26px 0 / 4px 16px no-repeat,
+    linear-gradient(#db2777, #db2777) 26px -2px / 10px 10px no-repeat;
+}
+
+.float-hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.float-hearts .h {
+  position: absolute;
+  bottom: 60px;
+  width: 16px;
+  height: 14px;
+  opacity: 0;
+  color: var(--valentine-red);
+}
+
+.float-hearts .h::before,
+.float-hearts .h::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  border-radius: 8px 8px 0 0;
+  background: currentColor;
+}
+
+.float-hearts .h::before { left: 2px; transform: rotate(-45deg); }
+.float-hearts .h::after { right: 2px; transform: rotate(45deg); }
+
+.float-hearts .h1 { left: 70%; }
+.float-hearts .h2 { left: 74%; }
+.float-hearts .h3 { left: 78%; }
+
+.park-hearts-toggle:checked ~ .moon-scene .float-hearts .h1 {
+  animation: hearts-rise 2.8s ease-in-out infinite;
+}
+.park-hearts-toggle:checked ~ .moon-scene .float-hearts .h2 {
+  animation: hearts-rise 3.3s ease-in-out infinite 0.6s;
+}
+.park-hearts-toggle:checked ~ .moon-scene .float-hearts .h3 {
+  animation: hearts-rise 3.6s ease-in-out infinite 1.1s;
+}
+
+/* :target driven navigation */
+.page:target {
+  display: block;
+}
+
+.page:target ~ .page {
+  display: none;
+}
+
+/* ---------------- Decorative Hearts ---------------- */
+.orbit-heart {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, #fff, var(--valentine-red));
+  box-shadow: 0 0 18px rgba(255, 77, 109, 0.8);
+  top: 14%;
+  right: 10%;
+  animation: orbit 7s linear infinite;
+}
+
+.orbit-heart::before,
+.orbit-heart::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.orbit-heart::before {
+  transform: translateX(-50%);
+}
+.orbit-heart::after {
+  transform: translateY(-50%);
+}
+
+.tiny-heart {
+  display: inline-block;
+  color: var(--valentine-red);
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* ---------------- Footer ---------------- */
+.site-footer {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  text-align: center;
+  color: var(--chocolate);
+  border-top: 1px solid var(--cupid-pink);
+  font-size: 0.9rem;
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0);
+  }
+}
+
+/* Town square keyframes */
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(140%);
+  }
+}
+
+@keyframes cupid-fly {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(140%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes bird-glide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(140%);
+  }
+}
+
+@keyframes ped-walk {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(160%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes car-drive {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(180%);
+  }
+}
+
+@keyframes balloon-rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-140%);
+    opacity: 0;
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(180%) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes moon-cloud-drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(170%);
+  }
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes shooting-star {
+  0%, 82%, 100% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) rotate(-18deg);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(420px) translateY(90px) rotate(-18deg);
+  }
+  92% {
+    opacity: 0;
+    transform: translateX(460px) translateY(105px) rotate(-18deg);
+  }
+}
+
+@keyframes mist-drift {
+  0% {
+    transform: translateX(-8%);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(8%);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateX(-8%);
+    opacity: 0.4;
+  }
+}
+
+@keyframes firefly-blink {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes tree-sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes lamp-flicker {
+  0%, 100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes couple-walk {
+  0% { left: -20%; transform: translateX(0); }
+  42% { left: 28%; transform: translateX(0); }
+  68% { left: 28%; transform: translateX(0); }
+  100% { left: -20%; transform: translateX(0); }
+}
+
+@keyframes dog-run {
+  0% { left: -24%; transform: translateX(0); }
+  45% { left: 20%; transform: translateX(0); }
+  68% { left: 20%; transform: translateX(0); }
+  100% { left: -24%; transform: translateX(0); }
+}
+
+@keyframes bike-pass {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-560%);
+  }
+}
+
+@keyframes hearts-rise {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes mini-heartbeat {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes tail-wag {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.75;
+  }
+}
+
+@keyframes head-look {
+  0%, 35%, 100% {
+    transform: rotate(0deg);
+  }
+  45%, 68% {
+    transform: rotate(-18deg) translateY(-1px);
+  }
+}
+
+@keyframes fireworks-show {
+  0%, 40%, 100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  48% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+  58% {
+    opacity: 0.95;
+    transform: scale(0.95);
+  }
+  68% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+@keyframes bench-spark {
+  0%, 42%, 100% {
+    opacity: 0;
+    transform: translateY(0) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.05);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateY(-8px) scale(1.1);
+  }
+  68% {
+    opacity: 0;
+    transform: translateY(-12px) scale(1.15);
+  }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .page-columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-header {
+    padding: var(--space-lg) 0 var(--space-md);
+  }
+
+  .nav-pills {
+    margin-top: var(--space-sm);
+  }
+
+  .moon-scene {
+    height: 250px;
+  }
+
+  .moon-disc {
+    width: 60px;
+    height: 60px;
+    top: 50px;
+    right: 84px;
+  }
+
+  .moon-glow {
+    width: 140px;
+    height: 140px;
+    top: 22px;
+    right: 50px;
+  }
+
+  .park-bench {
+    left: 18%;
+    bottom: 62px;
+  }
+
+  .park-lamp {
+    left: 79%;
+    bottom: 50px;
+  }
+
+  .walking-couple {
+    bottom: 52px;
+  }
+
+  .park-dog {
+    bottom: 46px;
+  }
+
+  .romance-glow {
+    left: 48%;
+    bottom: 76px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
