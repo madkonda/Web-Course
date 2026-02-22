@@ -1,0 +1,19 @@
+/* Grad bonus variant: CSS Grid review columns */
+#reviews-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2%;
+}
+
+.review-column,
+.review-column.right {
+  float: none;
+  width: auto;
+  margin-left: 0;
+}
+
+@media (max-width: 480px) {
+  #reviews-container {
+    grid-template-columns: 1fr;
+  }
+}
